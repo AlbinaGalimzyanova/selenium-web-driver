@@ -6,7 +6,6 @@ using OpenQA.Selenium.IE;
 using System;
 using System.Globalization;
 
-
 namespace SeleniumHomework
 {
     [TestFixture(typeof(ChromeDriver))]
