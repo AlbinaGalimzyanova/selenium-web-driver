@@ -56,7 +56,6 @@ namespace SeleniumHomework
             driver.FindElement(By.CssSelector("div[id=box-campaigns] li.product a.link")).SendKeys(Keys.Enter);
             
             var actualHeader = driver.FindElement(By.CssSelector("h1.title")).Text;
-            
             var actualOldPrice = driver.FindElement(By.CssSelector("s.regular-price"));
             var actualOldPriceText = actualOldPrice.Text;
             var actualOldPriceColor = actualOldPrice.GetCssValue("color");
@@ -93,7 +92,7 @@ namespace SeleniumHomework
         private void PriceSize(string sizeString, out float sizeFloat)
         {
             sizeFloat = float.Parse(sizeString.Remove(sizeString.Length - 2, 2),
-                CultureInfo.InvariantCulture.NumberFormat);
+                                    CultureInfo.InvariantCulture.NumberFormat);
         }
 
         [TearDown]
