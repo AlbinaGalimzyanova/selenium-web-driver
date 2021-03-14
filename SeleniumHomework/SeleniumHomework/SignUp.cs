@@ -37,14 +37,14 @@ namespace SeleniumHomework
             driver.FindElement(By.CssSelector("input[name=address2]")).SendKeys("test");
             driver.FindElement(By.CssSelector("input[name=postcode]")).SendKeys("12345");
             driver.FindElement(By.CssSelector("input[name=city]")).SendKeys("Kazan");
-            var dropdown = new SelectElement(driver.FindElement(By.CssSelector("select[name=country_code]")));
-            dropdown.SelectByText("United States");
+            driver.FindElement(By.CssSelector("span[class=select2-selection__rendered]")).Click();
+            driver.FindElement(By.CssSelector("li[id*='US']")).Click();
             driver.FindElement(By.CssSelector("input[name=email]")).SendKeys("test_" + dateTime + "@gmail.com");
             driver.FindElement(By.CssSelector("input[name=phone]")).SendKeys("+1234567890");
             driver.FindElement(By.CssSelector("input[name=password]")).SendKeys("qwerty");
             driver.FindElement(By.CssSelector("input[name=confirmed_password]")).SendKeys("qwerty");
             driver.FindElement(By.CssSelector("button[name=create_account]")).Click();
-            
+
             driver.FindElement(By.CssSelector("#box-account li:nth-of-type(4) a")).Click();
 
             driver.FindElement(By.CssSelector("input[name=email]")).SendKeys("test_" + dateTime + "@gmail.com");
