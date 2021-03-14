@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 
@@ -37,7 +36,7 @@ namespace SeleniumHomework
             driver.FindElement(By.CssSelector("input[name=address2]")).SendKeys("test");
             driver.FindElement(By.CssSelector("input[name=postcode]")).SendKeys("12345");
             driver.FindElement(By.CssSelector("input[name=city]")).SendKeys("Kazan");
-            driver.FindElement(By.CssSelector("span[class=select2-selection__rendered]")).Click();
+            driver.FindElement(By.CssSelector("span.select2-selection__rendered")).Click();
             driver.FindElement(By.CssSelector("li[id*='US']")).Click();
             driver.FindElement(By.CssSelector("input[name=email]")).SendKeys("test_" + dateTime + "@gmail.com");
             driver.FindElement(By.CssSelector("input[name=phone]")).SendKeys("+1234567890");
