@@ -18,7 +18,6 @@ namespace SeleniumHomework
         [SetUp]
         public void Start()
         {
-            Environment.SetEnvironmentVariable("webdriver.gecko.driver", "C:/Tools/geckodriver.exe");
             this.driver = new TWebDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
@@ -99,7 +98,6 @@ namespace SeleniumHomework
         public void Stop()
         {
             driver.Quit();
-            driver = null;
         }
     }
 }
