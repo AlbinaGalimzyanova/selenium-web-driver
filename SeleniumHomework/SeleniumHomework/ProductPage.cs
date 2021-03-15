@@ -62,7 +62,7 @@ namespace SeleniumHomework
             var actualOldPriceSize = actualOldPrice.GetCssValue("font-size");
             var actualCampaignPrice = driver.FindElement(By.CssSelector("strong.campaign-price"));
             var actualCampaignPriceColor = actualCampaignPrice.GetCssValue("color");
-            var actualCampaignPriceStyle = Int32.Parse(actualCampaignPrice.GetCssValue("font-weight"));
+            var actualCampaignPriceStyle = int.Parse(actualCampaignPrice.GetCssValue("font-weight"));
             var actualCampaignPriceSize = actualCampaignPrice.GetCssValue("font-size");
             
             RGB(actualOldPriceColor, out int rActualOld, out int gActualOld, out int bActualOld);
@@ -83,15 +83,16 @@ namespace SeleniumHomework
         private void RGB(string color, out int r, out int g, out int b)
         {
             color = color.Replace("rgba(", "").Replace("rgb(", "").Replace(")", "").Replace(" ", "");
-            r = Int32.Parse(color.Split(",")[0]);
-            g = Int32.Parse(color.Split(",")[1]);
-            b = Int32.Parse(color.Split(",")[2]);
+            var colorArray = color.Split(",");
+            r = int.Parse(colorArray[0]);
+            g = int.Parse(colorArray[1]);
+            b = int.Parse(colorArray[2]);
         }
 
         private void PriceSize(string sizeString, out float sizeFloat)
         {
-            sizeFloat = float.Parse(sizeString.Remove(sizeString.Length - 2, 2),
-                                    CultureInfo.InvariantCulture.NumberFormat);
+            var sizeCut = sizeString.Remove(sizeString.Length - 2, 2);
+            sizeFloat = float.Parse(sizeCut, CultureInfo.InvariantCulture.NumberFormat);
         }
 
         [TearDown]
