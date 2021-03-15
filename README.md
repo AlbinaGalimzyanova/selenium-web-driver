@@ -9,6 +9,7 @@
 - Задание 8: [ProductStickers.cs](../main/SeleniumHomework/SeleniumHomework/ProductStickers.cs)
 
 #### 5. Получение свойств элементов
+- Задание 9: [AdminSort.cs](../main/SeleniumHomework/SeleniumHomework/AdminSort.cs)
 - Задание 10: [ProductPage.cs](../main/SeleniumHomework/SeleniumHomework/ProductPage.cs)
 
 #### 6. Действия с элементами
