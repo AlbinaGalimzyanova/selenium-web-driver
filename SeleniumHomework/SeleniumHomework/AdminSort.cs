@@ -62,7 +62,7 @@ namespace SeleniumHomework
         }
 
         [Test]
-        public void SortGeoZones()
+        public void SortGeoZonesTest()
         {
             Login("admin", "admin");
 
