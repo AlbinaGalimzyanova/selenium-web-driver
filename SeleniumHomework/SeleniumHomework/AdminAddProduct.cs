@@ -27,7 +27,7 @@ namespace SeleniumHomework
             var productName = "Pirate Duck " + dateTime;
             var workingDirectory = AppContext.BaseDirectory;
             var projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-            var filePath = Path.Combine(projectDirectory + "/images/duck.jpg");
+            var filePath = Path.Combine(projectDirectory, "/images/duck.jpg");
 
             Login("admin", "admin");
             Thread.Sleep(1000);
@@ -50,8 +50,7 @@ namespace SeleniumHomework
             driver.FindElement(By.CssSelector("input[name=keywords]")).SendKeys("pirate");
             driver.FindElement(By.CssSelector("input[name='short_description[en]']")).SendKeys("Litte Pirate Duck");
             driver.FindElement(By.CssSelector("textarea[name='description[en]']")).SendKeys(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin ante massa, " +
-                "eget ornare libero porta congue.");
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin ante massa, eget ornare libero porta congue.");
             driver.FindElement(By.CssSelector("input[name='head_title[en]']")).SendKeys("Pirate Duck");
             driver.FindElement(By.CssSelector("input[name='meta_description[en]']")).SendKeys("Pirate Duck");
 
