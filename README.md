@@ -15,3 +15,6 @@
 #### 6. Действия с элементами
 - Задание 11: [SignUp.cs](../main/SeleniumHomework/SeleniumHomework/SignUp.cs)
 - Задание 12: [AdminAddProduct.cs](../main/SeleniumHomework/SeleniumHomework/AdminAddProduct.cs)
+
+#### 7. Ожидания (WebDriverWait)
+- Задание 13: [Cart.cs](../main/SeleniumHomework/SeleniumHomework/Cart.cs)
