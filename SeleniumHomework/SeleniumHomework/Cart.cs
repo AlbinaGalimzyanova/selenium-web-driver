@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace SeleniumHomework
@@ -35,7 +36,7 @@ namespace SeleniumHomework
             foreach(var shortcut in shortcuts)
             {
                 var table = driver.FindElement(By.CssSelector("table.dataTable"));
-                wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("button[name=remove_cart_item]")));
+                wait.Until(driver => driver.FindElement(By.CssSelector("button[name=remove_cart_item]")).Displayed);
                 driver.FindElement(By.CssSelector("button[name=remove_cart_item]")).Click();
                 wait.Until(ExpectedConditions.StalenessOf(table));
             }
@@ -44,7 +45,7 @@ namespace SeleniumHomework
         private void AddProductToCart(int index)
         {
             driver.FindElement(By.CssSelector("div.image-wrapper:nth-of-type(1)")).Click();
-            wait.Until(ExpectedConditions.ElementToBeClickable(By.Name("add_cart_product")));
+            wait.Until(driver => driver.FindElement(By.Name("add_cart_product")));
             
             if (driver.FindElements(By.CssSelector("select[name='options[Size]']")).Count != 0)
             {
