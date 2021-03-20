@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace SeleniumHomework
 {
@@ -25,8 +26,9 @@ namespace SeleniumHomework
         public void CheckBrowserLogsTest()
         {
             Login("admin", "admin");
-            wait.Until(driver => driver.FindElement(By.CssSelector("#app-:nth-of-type(2)")).Displayed &&
-                driver.FindElement(By.CssSelector("#app-:nth-of-type(2)")).Enabled);
+            Thread.Sleep(1000); // wait.Until() почему-то срабатывает далеко не всегда
+            /*wait.Until(driver => driver.FindElement(By.CssSelector("#app-:nth-of-type(2)")).Displayed &&
+                driver.FindElement(By.CssSelector("#app-:nth-of-type(2)")).Enabled);*/
             driver.FindElement(By.CssSelector("#app-:nth-of-type(2)")).Click();
             wait.Until(driver => driver.FindElement(By.TagName("h1")).Displayed);
             var products = driver.FindElements(By.CssSelector("tr.row td:nth-of-type(3) a[href*=product_id]"));

@@ -27,7 +27,7 @@ namespace SeleniumHomework
             var productName = "Pirate Duck " + dateTime;
             var workingDirectory = AppContext.BaseDirectory;
             var projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-            var filePath = Path.Combine(projectDirectory, "/images/duck.jpg");
+            var filePath = Path.Combine(projectDirectory, "images/duck.jpg");
 
             Login("admin", "admin");
             Thread.Sleep(1000);
