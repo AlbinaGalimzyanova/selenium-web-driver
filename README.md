@@ -18,3 +18,6 @@
 
 #### 7. Ожидания (WebDriverWait)
 - Задание 13: [Cart.cs](../main/SeleniumHomework/SeleniumHomework/Cart.cs)
+
+#### 10. Протоколирование
+- Задание 17: [AdminLogging.cs](../main/SeleniumHomework/SeleniumHomework/AdminLogging.cs)
