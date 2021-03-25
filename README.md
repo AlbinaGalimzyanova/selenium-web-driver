@@ -19,5 +19,11 @@
 #### 7. Ожидания (WebDriverWait)
 - Задание 13: [Cart.cs](../main/SeleniumHomework/SeleniumHomework/Cart.cs)
 
+#### 8. Окна и диалоги
+- Задание 14: [AdminTabs.cs](../main/SeleniumHomework/SeleniumHomework/AdminTabs.cs)
+
 #### 10. Протоколирование
 - Задание 17: [AdminLogging.cs](../main/SeleniumHomework/SeleniumHomework/AdminLogging.cs)
+
+#### 11. PageObjects и другие шаблоны проектирования
+- Задание 19: [PageObject](../main/SeleniumHomework/SeleniumHomework/PageObject)
